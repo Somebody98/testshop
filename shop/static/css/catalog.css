@@ -1,0 +1,134 @@
+/*Модальное окно - свойства================================*/
+.modal-content, .modal-content2 {
+    min-width:280px;
+    width: 34%;
+    margin: 10% 35%;
+}
+
+.modal-content {
+    width: 34%;
+}
+
+
+@media (min-width:300px ) and (max-width:600px){
+
+.modal-content, .modal-content2 {
+    width: 52%;
+    margin: 10% 4%;
+}
+
+}
+
+/*Модальное окно - end================================*/
+
+.glav-catalog {
+    display: flex;
+    width: 264px;
+    height: 34px;
+    margin-top: 50px;
+    margin-left: 25%;
+    color: #7E7E83;
+    font-size: 19px;
+    font-family: 'Verdana';
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+
+.glav-a{
+    width: auto;
+    text-decoration: none;
+    color: #7E7E83;
+    display: block;
+}
+
+.glav-a:hover{
+    color: rgb(89, 124, 145);
+}
+
+.tovari-content{
+    width: 100%;
+}
+
+.tovari-catalog {
+    margin-top: 50px;
+    margin-left: 28%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 55%;
+    height: auto;
+    align-content: flex-start;
+    justify-content: flex-start;
+}
+
+.tovari-catalog-a {
+    width: 226px;
+    height: 191.23px;
+    background-color: #FFFCFC;
+    -webkit-box-shadow: 2px 5px 10px 11px rgba(15, 22, 32, 0.2);
+    -moz-box-shadow: 2px 5px 10px 11px rgba(15, 22, 32, 0.2);
+    box-shadow: 2px 5px 10px 11px rgba(15, 22, 32, 0.2);
+    border-radius: 9px;
+    /* margin-top: 10px; */
+    margin-bottom: 50px;
+    margin-right: 53px;
+    /* margin: auto; */
+    padding: 10px;
+}
+
+.tovari-catalog a{
+    text-decoration: none;
+}
+
+.tovari-catalog-a img {
+    padding: 40px;
+}
+
+.tovari-catalog-a h1 {
+    margin-top: -20px;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Verdana';
+    font-weight: normal;
+    color: black;
+}
+
+
+
+
+@media (min-width: 971px) and (max-width: 1775px){
+.tovari-catalog {
+    width: 91%;
+    padding-top: 30px;
+    /* margin: auto; */
+    margin-left: 5%;
+}
+
+}
+
+
+@media (min-width: 615px) and (max-width: 970px){
+.tovari-catalog {
+    width: 100%;
+    padding-top: 30px;
+    /* margin: auto; */
+    margin-left: 5%;
+}
+
+}
+
+@media (min-width: 0px) and (max-width: 615px){
+.tovari-catalog {
+    padding-top: 30px;
+    margin: auto;
+}
+
+.glav-catalog{
+    margin-left: 10%;
+}
+
+}
+

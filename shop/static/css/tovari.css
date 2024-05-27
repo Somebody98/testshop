@@ -1,0 +1,111 @@
+.glav-catalog {
+    display: flex;
+    width: 264px;
+    height: 34px;
+    margin-top: 117px;
+    margin-left: 26%;
+    color: #7E7E83;
+    font-size: 19px;
+    font-family: 'Verdana';
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+}
+
+.glav-a{
+    width: auto;
+    text-decoration: none;
+    color: #7E7E83;
+    display: block;
+}
+
+.glav-a:hover{
+    color: rgb(89, 124, 145);
+}
+
+.box {
+    margin-top: 25px;
+    margin-left: 21%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 61%;
+    height: auto;
+    justify-content: flex-start;
+}
+
+.tovar {
+    margin-left: 40px;
+    height: 480px;
+}
+
+.tovar h1 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.tovar a img {
+    border-radius: 13px;
+}
+
+.nazvanie {
+    width: 240px;
+    text-align: center;
+}
+
+.nazvanie a {
+    width: 10px;
+    font-size: 20px;
+    line-height: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+
+.nazvanie a:hover {
+    color: rgb(245, 50, 50); /* Меняем цвет текста */
+}
+
+.vkorziny {
+    margin-top: 10px;
+}
+
+.button_166 {
+    display: inline-block !important;
+    background-color: #18a979;
+    color: #ffffff !important;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    font-size: 19px !important;
+    text-decoration: none !important;
+    padding: 12px 0px !important;
+    transition: all 0.4s ease !important;
+}
+
+.button_166:hover{
+    text-decoration: none !important;
+    background-color: #b30e0e !important;
+}
+
+
+@media (min-width:0px ) and (max-width:450px){
+.glav-catalog {
+    margin-left: 5%;
+}
+
+.box {
+    margin-left: 5%;
+}
+}
+
+
+@media (min-width:1920px ){
+.box{
+        width: 63%;
+}
+}

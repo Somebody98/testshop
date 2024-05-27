@@ -1,0 +1,78 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css\base.css'%}">
+    {% block cssstyle %} {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+<header class="header">
+        <div class="logo"><img src="{% static '/img/logo.png' %}" alt="" width="245px" height="140px"></div>
+
+        <!-- Меню для телефонов -->
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><img src="{% static '/img/menu.png' %}" alt="" width="100px " height="100px" ></span></label>
+            <!-- Menu -->
+            <nav class="nav">
+                <ul class="menu">
+                    <li><a href="{% url 'catalog' %}">Каталог товаров</a></li>
+                    <li><a href="{% url 'delivery' %}">Доставка</a> </li>
+                    <li><a href="{% url 'main' %}">Главная</a></li>
+                    <li><a href="/cart">Корзина</a></li>
+                    <li class="authorize-small-resolution" >
+                        {% if user.is_authenticated %}
+                        <p><a>Ваше имя пользователя - {{user.username}} <a href="{% url 'logout' %}">Выйти из аккаунта</a></a></p>
+
+                        {% else %}
+                          <a href="{% url 'login' %}">Вход</a>
+                          <a href="{% url 'reg' %}">Регистрация</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </nav>
+        <!-- end -->
+
+            <div class="line"></div>
+            <div class="adres"><h1>Г. Шумерля, улица Ленина,  дом 24</h1></div>
+                 <div class="auth">
+                    {% if user.is_authenticated %}
+                    <p><a href="">{{user.username}}</a></p>
+                    <p><a href="{% url 'logout' %}">Выйти</a></p>
+                    {% else %}
+                      <a href="{% url 'login' %}">Вход</a>
+                      <a href="{% url 'reg' %}">Регистрация</a>
+                    {% endif %}
+                 </div>
+
+                <div class="knopki">
+                    <ul>
+                        <li><a href="{% url 'catalog' %}" class="button_01">Каталог товаров</a></li>
+                        <li><a href="{% url 'delivery' %}" class="button_01">Доставка</a></li>
+                        <li><a href="{% url 'main' %}" class="button_01">Главная</a></li>
+                {% with total_items=cart|length %}
+                    {% if cart|length > 0 %}
+                        <li><a href="/cart" class="button_01">Корзина<p class="cart__num" id="cart_num">{{ total_items }}</p></a></li>
+                    {% else %}
+                        <li><a href="/cart" class="button_01">Корзина</a></li>
+                    {% endif %}
+                {% endwith %}
+                    </ul>
+                </div>
+</header>
+<main>
+{% block content %}
+
+{% endblock %}
+</main>
+
+
+<footer></footer>
+
+{% block js %}
+{% endblock %}
+
+</body>
+</html>

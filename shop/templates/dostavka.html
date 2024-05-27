@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssstyle %}
+    <link rel="stylesheet" href="{% static 'css\index.css'%}">
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="dannie-dostavka">
+        <div class="text-dostavka">
+            <h1>Добро пожаловать в интернет-магазин «Бытовая техника»</h1>
+                <p> Время работы магазина: 09:00 – 18:00 (пн – пт) <br> <br>
+                    Телефон: +7 (965) 689-26-78 <br><br>
+                    Уважаемые покупатели! <br><br>
+                    Cпособом общения является направление вашего обращения по <br>  (<a href="{% url 'send-message' %}">Форме обратной связи</a>).
+                </p>
+
+                    <h1>Оплата товаров</h1>
+                        <div class="visamastercardsberbank"><img src="{% static 'img\glavnaya\visamastercardsberbank.png'%}" style="width: 100%;height: 100%;"></div>
+                            <p>Способы оплаты:<br></p>
+
+                                <p class="center">Наличный расчёт:</p><br>
+                                    <p>Если товар доставляется курьером, то оплата осуществляется наличными курьеру в руки. При получении товара обязательно проверьте комплектацию товара, наличие гарантийного талона и чека.</p><br><br>
+
+
+                                    <p class="center">Банковской картой: </p><br>
+                                        <p>Оплата происходит через ПАО СБЕРБАНК с использованием банковских карт следующих платёжных систем:</p>
+                                            <ul>
+                                                <li>Мир</li>
+                                                <li>VISA International</li>
+                                                <li>Mastercard Worldwide</li>
+                                            </ul>
+
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+    

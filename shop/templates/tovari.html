@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssstyle %}
+
+<link rel="stylesheet" href="{% static 'css\tovari.css'%}">
+{% endblock %}
+
+
+
+
+{% block content %}
+    <div class="glav-catalog">
+        <a href="{% url 'main' %}" class="glav-a" >Главная -</a>
+        <a href="{% url 'catalog' %}"  class="glav-a" > Каталог товаров </a>
+    </div>
+
+            <div class="box">
+                {% for post in pr %}
+                <div class="tovar" id="{{ post.id }}"><a href="/catalog/products/{{ post.slug }}"><img src="/static/img/{{ post.image }}" width="240px" height="200" alt=""></a><h1>{{ post.price }} ₽</h1>
+                    <div class="nazvanie">
+                        <a href="/catalog/products/{{ post.slug }}">{{ post.name }}</a>
+                    </div>
+                        <div class="vkorziny">
+                            <a class="button_166" href="/catalog/products/{{ post.slug }}" >Перейти к товару</a>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+{% endblock %}

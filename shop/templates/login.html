@@ -1,0 +1,29 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssstyle %}
+<link rel="stylesheet" href="{% static 'css\loginreg.css'%}">
+{% endblock %}
+
+{% block content %}
+<div class="login">
+    {% block regwindow %}
+
+    <main>
+        <h1>Авторизация</h1><br>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <p><button type="submit" class="submit">Войти</button></p>
+        </form>
+        <br>
+        <h2>Если вы не зарегистрированы то зарегистрируйтесь по этой ссылке <a href="{% url 'reg' %}">ссылке</a></h2>
+    </main>
+
+    {% endblock regwindow %}
+</div>
+{% endblock %}
+
+

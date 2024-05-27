@@ -1,0 +1,436 @@
+header {
+    width: 101%;
+    height: 70px;
+    /* background-color: #2E2F2F; */
+    /* box-shadow: -7px -3px 3px 6px; */
+    margin: -2px -8px;
+    top: 0;
+    position: absolute;
+}
+
+.cart {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  transition: 0.1s;
+  cursor: pointer;
+  position: fixed; /* Фиксированное расположение */
+  top: 50px; /* в правом верхнем углу */
+  right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+  padding: 15px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Увеличиваем кнопку при наведении на нее */
+.cart:hover {
+  transform: scale(1.1);
+}
+
+/* Стилизуем счетчик товаров */
+.cart__num {
+  position: absolute;
+  background-color: #d62240;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  top: -5px;
+  right: -5px;
+}
+
+
+footer {
+    width: 101%;
+    height: 40%;
+}
+
+li {
+    border: 1px solid #817171;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    list-style-type: none;
+}
+
+.menu {
+    width: 225px;
+    margin-left: 18%;
+    margin-top: 17px;
+}
+
+.menu li {
+    width: auto;
+    cursor: pointer;
+}
+
+.menu li > a {
+    color: black;
+    width: auto;
+    display: block;
+    text-decoration: none;
+}
+
+body {
+    background-color: #e7e7e7;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.shopping-cart {
+  width: 750px;
+  height: auto;
+  margin: 80px auto;
+  background: #FFFFFF;
+  box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+    height: 60px;
+    border-bottom: 1px solid #E1E8EE;
+    padding: 20px 30px;
+    color: #5E6977;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.title2 {
+  color: #5E6977;
+  font-size: 28px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.naimenovania {
+    display: flex;
+}
+
+.p1,.p2,.p3,.p4{
+        padding-top: 15px;
+    font-size: 20px;
+}
+
+.p1 {
+    margin-left: 77px;
+
+}
+
+.p2 {
+    margin-left: 75px;
+}
+
+.p3 {
+    margin-left: 53px;
+}
+
+.p4 {
+    margin-left: 70px;
+}
+
+.item {
+    padding: 20px 20px;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.item {
+  border-top:  1px solid #E1E8EE;
+  border-bottom:  1px solid #E1E8EE;
+  border-left: 1px solid #E1E8EE;
+  border-right: 1px solid #E1E8EE;
+}
+
+.buttons {
+  position: relative;
+  padding-top: 30px;
+  margin-right: 60px;
+}
+
+
+.description2 {
+    width: 300px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.description2 p {
+    width: 100%;
+    font-size: 14px;
+    color: #43484D;
+    font-weight: 400;
+}
+
+.total-price2 {
+    width: 300px;
+    margin-top: 50px;
+    font-size: 22px;
+    color: #43484D;
+    font-weight: 350;
+    text-align: center;
+}
+
+.buttons-delete {
+    margin-top: 35px
+}
+
+button{
+    font-size: 18px;
+}
+
+.buttons-delete h1 {
+    font-size: 20px;
+    color: #e56b6b;
+}
+
+.delete-btn {
+  display: inline-block;
+  Cursor: pointer;
+}
+.delete-btn {
+  width: 18px;
+  height: 17px;
+  background: url("delete-icn.svg") no-repeat center;
+}
+
+
+
+button[class*=btn] {
+  width: 30px;
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.minus-btn img {
+  margin-bottom: 3px;
+}
+
+.plus-btn img {
+  margin-top: 2px;
+}
+
+button:focus,
+input:focus {
+  outline:0;
+}
+
+
+.total-price {
+    width: 100px;
+    text-align: center;
+
+    margin: 26px 280px;
+}
+
+.modal-content {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.get-total-price {
+    font-size: 22px;
+    color: #43484D;
+    font-weight: 350;
+    text-align: right;
+    margin-right: 26px;
+}
+
+.get-total-price p{
+    font-size: 22px;
+    color: #43484D;
+    font-weight: 350;
+    text-align: right;
+    margin-right: 26px;
+}
+
+.text-right{
+    margin: auto;
+}
+
+
+/*                      ############################################################################*/
+
+@media (min-width: 0px) and (max-width: 600px){
+ .naimenovania{
+    display: none;
+ }
+}
+
+@media (min-width: 0px) and (max-width: 1050px){
+ .cart{
+    display: none;
+ }
+}
+
+@media (min-width: 501px) and (max-width: 757px){
+  .shopping-cart {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+.image img {
+    width: 130px;
+    height: 181px;
+}
+
+  .image,
+  .quantity,
+  .description {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;
+  }
+
+  .buttons {
+    margin-right: 20px;
+  }
+
+.modal-content {
+    width: 80%;
+    margin-left: 14%;
+}
+
+
+}
+
+
+
+@media (min-width: 400px) and (max-width: 500px){
+
+.modal-content{
+    margin-left: 15%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.shopping-cart {
+    width: 96%;
+}
+
+.image{
+    margin: auto;
+}
+
+img {
+    width: 94%;
+    height: 32%;
+    margin-left: 25px;
+}
+
+.description2 {
+    width: auto;
+    text-align:center;
+    font-size: 35px;
+}
+
+.description2 p {
+    font-size: 23px;
+}
+
+.total-price2 {
+    width: auto;
+    /* margin-left: 33%; */
+    /* margin-top: 14px; */
+    margin: auto;
+}
+
+.buttons-delete {
+    margin: auto;
+}
+.get-total-price {
+    margin: auto;
+}
+
+.get-total-price p {
+    text-align: center;
+}
+
+}
+
+
+
+
+@media (min-width: 1px) and (max-width: 399px){
+
+.modal-content{
+    margin-left: 1%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.shopping-cart {
+    width: 96%;
+}
+
+.image{
+    margin: auto;
+}
+
+img {
+    width: 94%;
+    height: 32%;
+    margin-left: 25px;
+}
+
+.description2 {
+    width: auto;
+    text-align:center;
+    font-size: 35px;
+}
+
+.description2 p {
+    font-size: 23px;
+}
+
+.total-price2 {
+    width: auto;
+    /* margin-left: 33%; */
+    /* margin-top: 14px; */
+    margin: auto;
+}
+
+.buttons-delete {
+    margin-top: 35px;
+    margin-left: 25%;
+}
+.get-total-price {
+    margin: auto;
+}
+
+.get-total-price p {
+    text-align: center;
+}
+
+}

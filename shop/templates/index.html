@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssstyle %}
+    <link rel="stylesheet" href="{% static 'css\index.css'%}">
+{% endblock %}
+
+
+
+{% block content %}
+<div class="main-block"><p>В интернет-магазине представлен большой ассортимент товаров по доступным ценам.<br> У нас действует удобная доставка до Вашего дома<br>
+Вы можете быстро и недорого купить любые товары в удобное время суток!</p>
+    <div class="main-block-knopka" >
+        <a href="{% url 'catalog' %}" class="button_1711202609292">Каталог товаров</a>
+    </div>
+</div>
+
+    <div class="main-block2">
+
+
+<div class="main-block2-brend"><h1>Бренды</h1></div>
+            <div class="block2-brend-cart">
+
+<!--                <div class="block2-brend-cart-2">-->
+                    <div class="brend-cart-1"><img src="{% static 'img\glavnaya\lg.png'%}"></div>
+                    <div class="brend-cart-1"><img src="{% static 'img\glavnaya\samsung.png'%}"></div>
+                    <div class="brend-cart-1"><img src="{% static 'img\glavnaya\sony.png'%}"></div>
+                    <div class="brend-cart-1"><img src="{% static 'img\glavnaya\electrolix.png'%}"></div>
+                    <div class="brend-cart-1"><img src="{% static 'img\glavnaya\bosch.png'%}"></div>
+                    <div class="brend-cart-1"><img src="{% static 'img\glavnaya\haier.png'%}"></div>
+                    <div class="brend-cart-1"><img src="{% static 'img\glavnaya\roca.png'%}"></div>
+                    <div class="brend-cart-1"><img src="{% static 'img\glavnaya\philips.png'%}"></div>
+<!--                </div>-->
+            </div>
+    </div>
+
+<div class="main-block3"><div class="main-block3-zagolovok"><h1>Популярные товары</h1></div>
+            <div class="main-block3-box">
+
+                {% for post in pr %}
+                <div class="main-block3-tovar" id="{{ post.id }}"><a href="/catalog/products/{{ post.slug }}"><img src="/static/img/{{ post.image }}" width="240px" height="200" alt=""></a><h1>{{ post.price }} ₽</h1>
+                    <div class="main-block3-nazvanie">
+                        <a href="/catalog/products/{{ post.slug }}">{{ post.name }}</a>
+                    </div>
+                        <div class="main-block3-ktovary">
+                            <a class="button_166" href="/catalog/products/{{ post.slug }}" >Перейти к товару</a>
+                        </div>
+                </div>
+                {% endfor %}
+            </div>
+</div>
+
+
+
+
+{% endblock %}

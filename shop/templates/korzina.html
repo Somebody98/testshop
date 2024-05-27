@@ -1,0 +1,99 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css\korzina.css'%}">
+
+    <title>Document</title>
+    <style>
+        input {width: 100%;}
+        body, :root {background-color:#ecf6d9}
+        .modal-header,.modal-body,.modal-footer {background-color: #fffdf3;}
+    </style>
+</head>
+
+<header>
+
+<ul class="menu">
+  <li><a href="{% url 'catalog' %}">Вернуться к каталогу</a></li>
+</ul>
+
+</header>
+
+<body>
+<div class="shopping-cart">
+      <!-- Title -->
+      <div class="title">
+        Shopping
+      </div>
+      <div class="title2">
+        Корзина пустая
+      </div>
+
+      <!-- Товар #1 -->
+
+
+      <div class="item">
+        <div class="image">
+          <img src="/static/img/{{ post.image }}" width="150px" height="150px" alt="" />
+        </div>
+
+        <div class="description2">
+          <p>Описание товара</p>
+        </div>
+        <div class="total-price2">Цена товара ₽</div>
+
+        <div class="buttons-delete">
+          <button class="del-b" >Удалить товар</button>
+        </div>
+      </div>
+
+    {% for post in tv %}
+      <div class="item">
+        <div class="image">
+          <img src="/static/img/{{ post.image }}" width="150px" height="150px" alt="" />
+        </div>
+
+        <div class="description2">
+          <p>{{ post.name }}</p>
+        </div>
+        <div class="total-price2">{{ post.price }} ₽</div>
+
+        <div class="buttons-delete">
+          <button class="del-b" >Удалить товар</button>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+  <!-- Модальное окно -->
+      <div class="modal-content" style="min-width: 300px;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" >Отправьте ваш заказ</h5>
+<!--          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>-->
+        </div>
+        <div class="modal-body">
+        <form method="POST">
+            {% csrf_token %}
+            <div>
+            {{ form.as_p }}
+            </div>
+            <input name="date" value="{{ current_datetime }}" readonly style="display: none">
+            <input type="submit" style="font-size: 17px" value="  Отправить  ">
+        </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+
+<footer></footer>
+
+<script src="{% static 'js\bascket.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+

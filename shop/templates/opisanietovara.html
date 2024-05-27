@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssstyle %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css\opisanietovara.css'%}">
+{% endblock %}
+
+{% block content %}
+    {% for post in pr %}
+        <div class="soder-kart"><img src="/static/img/{{ post.image2 }}" alt=""></div>
+
+        <div class="soder">
+            <div class="nazvanie-soder" id="{{ post.id }}">
+                {{ post.name }}
+            </div>
+                <h1>Все характеристики:</h1>
+                    <div class="tovar-any-opisanie">
+                        <p>
+                            {{ post.description|linebreaksbr }}
+                        </p>
+                    </div>
+
+
+         <div class="buyblock">
+            <h1>{{ post.price }} ₽</h1>
+            <form class="addtocart" action="{% url "cart:cart_add" post.id %}" method="post">
+                {{ cart_product_form }}
+                {% csrf_token %}
+                <div class="buyblock-knopka" ><input type="submit" value="Купить" class="button_166"></div>
+            </form>
+
+         </div>
+
+<!--            <form class="addtocart" action="{% url "cart:cart_add" post.id %}" method="post">-->
+<!--                {{ cart_product_form }}-->
+<!--                {% csrf_token %}-->
+<!--                <input type="submit" value="Add to cart">-->
+<!--            </form>-->
+        </div>
+    {% endfor %}
+
+
+<!-- Кнопка-триггер модального окна -->
+<!--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">-->
+<!--  Запустите демо модального окна-->
+<!--</button>-->
+
+<!-- Модальное окно -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body" >
+        Авторизируйтесь для покупки товара
+      </div>
+      <div class="modal-footer">
+        <form action="{% url 'login' %}">
+            <button type="submit" class="btn btn-primary">Авторизироваться</button>
+        </form>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block js %}
+<script src="{% static 'js\order.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% endblock %}

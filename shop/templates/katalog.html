@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssstyle %}
+    <link rel="stylesheet" href="{% static 'css\catalog.css'%}">
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="glav-catalog">
+        <a href="{% url 'main' %}" class="glav-a" >Главная -</a>
+        <a href="#"  class="glav-a" > Каталог товаров </a>
+    </div>
+
+    <div class="tovari-catalog">
+        {% for post in tv %}
+        <a href="/catalog/{{ post.slug }}/" class="tovari-catalog-a"><img src="/static/img/{{ post.image }}" width="148px" height="83.02" ><h1>{{ post.name }}</h1></a>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js\order.js' %}"></script>
+{% endblock %}
+

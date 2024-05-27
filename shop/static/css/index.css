@@ -1,0 +1,274 @@
+footer {
+    background-color: #2E2F2F;
+    margin-top: 100px;
+    margin-left: -8;
+    width: 101%;
+    height: 15%
+}
+
+
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+
+.dannie-dostavka {
+    margin-top: 100px;
+    width:100%;
+}
+
+.text-dostavka {
+    margin-left: 30%;
+    width: 50%;
+}
+
+.visamastercardsberbank {
+    width: 519px;
+    height: 89px;
+}
+
+.text-dostavka h1 {
+    font-size: 22px;
+}
+
+.text-dostavka p {
+    font-size: 21px;
+}
+
+ul {
+    font-size: 21px;
+}
+
+.center {
+    text-align: center;
+}
+
+@media (min-width:700px ) and (max-width:1200px){
+
+.visamastercardsberbank{
+    width: 69%;
+    height: 100px;
+}
+
+.text-dostavka {
+    margin-left: 3%;
+    width: 80%;
+}
+
+}
+
+@media (min-width:0px ) and (max-width:699px){
+
+.visamastercardsberbank {
+    width: 90%;
+    height: 50px;
+}
+
+.text-dostavka {
+    margin-left: 3%;
+    width: 80%;
+}
+}
+
+
+
+
+/* main content ==================================================================================================================*/
+
+.main-block {
+    width: 50%;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 24%;
+    border: 2px solid #7D9A98;
+    border-radius: 13px;
+}
+
+.main-block p {
+    padding: 30px;
+    font-size: 21px;
+}
+
+.main-block-knopka {
+    margin: auto;
+    width: 210px;
+    padding-bottom: 10px;
+}
+.button_1711202609292 {
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #2db5bc !important;
+    color: #ffffff !important;
+    border: 3px solid #ffffff !important;
+    border-radius: 16px !important;
+    font-size: 18px !important;
+    padding: 10px 33px !important;
+    transition: all 0.8s ease !important;
+}
+.button_1711202609292:hover{
+    text-decoration: none !important;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #ffffff !important;
+}
+
+
+.main-block2 {
+    width: 100%;
+    height: auto;
+    background-color: #EEEEEE;
+    border-top: 1.5px solid #6D6D6D;
+    border-bottom: 1.5px solid #6D6D6D;
+    margin-top: 150px;
+}
+
+.main-block2-brend {
+    width: 120px;
+    height: 60px;
+    margin: auto;
+    /* background-color: #d6d6d6; */
+}
+
+.main-block2-brend h1 {
+    font-size: 25px;
+    color: #663a8f;
+    line-height: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin-left: -38px;
+}
+
+.block2-brend-cart {
+    /* margin-top: 0px; */
+    margin-left: 17.4%;
+    margin-bottom: 50px;
+    width: 66%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /* margin-left: 18.5%; */
+    padding-top: 5px;
+    padding-bottom: 17px;
+}
+
+
+.brend-cart-1 {
+    background-color: gainsboro;
+    padding: 6px;
+}
+
+.main-block3 {
+    width: 100%
+    height: auto;
+    margin-top: 100px;
+}
+
+.main-block3-zagolovok h1 {
+    color: #3497CF;
+    text-align: center;
+    /* line-height: 30px; */
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.main-block3-box {
+    margin-top: 50px;
+    margin-left: 19%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 66%;
+    height: auto;
+    justify-content: flex-start;
+}
+
+.main-block3-tovar {
+    margin-left: 60px;
+    height: 480px;
+}
+
+.main-block3-tovar h1 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.main-block3-tovar a img {
+    border-radius: 13px;
+}
+
+.main-block3-nazvanie {
+    width: 240px;
+    text-align: center;
+}
+
+.main-block3-nazvanie a {
+    width: 10px;
+    font-size: 20px;
+    line-height: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+
+.main-block3-nazvanie a:hover {
+    color: rgb(245, 50, 50); /* Меняем цвет текста */
+}
+
+.main-block3-ktovary {
+    margin-top: 10px;
+}
+
+.button_166 {
+    display: inline-block !important;
+    background-color: #18a979;
+    color: #ffffff !important;
+    border-radius: 6px;
+    width: 100%;
+    text-align: center;
+    font-size: 19px !important;
+    text-decoration: none !important;
+    padding: 12px 0px !important;
+    transition: all 0.4s ease !important;
+}
+
+.button_166:hover{
+    text-decoration: none !important;
+    background-color: #b30e0e !important;
+}
+
+
+@media (min-width:401px) and (max-width: 600px){
+    .main-block {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.block2-brend-cart {
+    margin-right: 20%;
+}
+}
+
+@media (min-width:0px) and (max-width: 400px){
+
+.main-block {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.block2-brend-cart {
+    margin: 3%;
+}
+
+.main-block3-box {
+    margin-left: 0;
+}
+}
+
+
+
+
